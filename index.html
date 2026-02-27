@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Emmet — HTML & CSS más rápido</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__brand">
+                <span class="header__logo">⚡</span>
+                <div>
+                    <h1 class="header__title">Guía <span>Emmet</span></h1>
+                    <p class="header__sub">Escribe HTML &amp; CSS a la velocidad del pensamiento</p>
+                </div>
+            </div>
+            <div class="progress-wrap">
+                <span class="progress-label" id="progressLabel">1 / 6</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="tabs" id="tabs">
+        <button class="tab active" data-section="html-base">HTML Base</button>
+        <button class="tab" data-section="operadores">Operadores</button>
+        <button class="tab" data-section="atributos">Atributos</button>
+        <button class="tab" data-section="css-emmet">CSS</button>
+        <button class="tab" data-section="playground">Playground</button>
+        <button class="tab" data-section="cheatsheet">Cheat Sheet</button>
+    </nav>
+
+    <main class="main">
+
+        <!-- ── SECCIÓN 1: HTML BASE ── -->
+        <section class="section active" id="html-base">
+            <div class="section-header">
+                <span class="section-num">01</span>
+                <h2>HTML Base</h2>
+                <p>Haz clic en cualquier abreviatura para copiarla al portapapeles.</p>
+            </div>
+
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card__title">Boilerplate HTML5</div>
+                    <div class="snippet" data-copy="!">
+                        <code class="snippet__abbr">!</code>
+                        <span class="snippet__arrow">→</span>
+                        <code
+                            class="snippet__output">&lt;!DOCTYPE html&gt;<br>&lt;html lang="en"&gt;...&lt;/html&gt;</code>
+                    </div>
+                    <p class="card__desc">Genera la estructura completa de un documento HTML5.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Tags simples</div>
+                    <div class="snippet" data-copy="p"><code class="snippet__abbr">p</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">&lt;p&gt;&lt;/p&gt;</code>
+                    </div>
+                    <div class="snippet" data-copy="section"><code class="snippet__abbr">section</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;section&gt;&lt;/section&gt;</code></div>
+                    <div class="snippet" data-copy="header"><code class="snippet__abbr">header</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;header&gt;&lt;/header&gt;</code></div>
+                    <p class="card__desc">Cualquier nombre de tag HTML es un atajo válido.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Texto dentro del tag</div>
+                    <div class="snippet" data-copy="p>{Hola mundo}"><code
+                            class="snippet__abbr">p>{Hola mundo}</code><span class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;p&gt;Hola mundo&lt;/p&gt;</code></div>
+                    <div class="snippet" data-copy="h1>{Mi título}"><code
+                            class="snippet__abbr">h1>{Mi título}</code><span class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;h1&gt;Mi título&lt;/h1&gt;</code></div>
+                    <p class="card__desc">Las llaves <strong>{}</strong> insertan texto como contenido.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Links e imágenes</div>
+                    <div class="snippet" data-copy="a"><code class="snippet__abbr">a</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;a href=""&gt;&lt;/a&gt;</code></div>
+                    <div class="snippet" data-copy="img"><code class="snippet__abbr">img</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;img src="" alt=""&gt;</code></div>
+                    <div class="snippet" data-copy="link:css"><code class="snippet__abbr">link:css</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;link rel="stylesheet" href="style.css"&gt;</code></div>
+                    <p class="card__desc">Tags con atributos comunes ya pre-rellenados.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Inputs y formularios</div>
+                    <div class="snippet" data-copy="input:text"><code class="snippet__abbr">input:text</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;input type="text"&gt;</code></div>
+                    <div class="snippet" data-copy="input:email"><code class="snippet__abbr">input:email</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;input type="email"&gt;</code></div>
+                    <div class="snippet" data-copy="input:submit"><code class="snippet__abbr">input:submit</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;input type="submit" value=""&gt;</code></div>
+                    <p class="card__desc">El tipo del input se escribe con dos puntos <strong>:</strong></p>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Lorem Ipsum</div>
+                    <div class="snippet" data-copy="lorem"><code class="snippet__abbr">lorem</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">Lorem ipsum dolor sit amet...</code></div>
+                    <div class="snippet" data-copy="lorem5"><code class="snippet__abbr">lorem5</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">Lorem ipsum dolor sit amet.</code></div>
+                    <div class="snippet" data-copy="p*3>lorem8"><code class="snippet__abbr">p*3>lorem8</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">3 párrafos con 8 palabras c/u</code></div>
+                    <p class="card__desc">El número indica cuántas palabras generar.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── SECCIÓN 2: OPERADORES ── -->
+        <section class="section" id="operadores">
+            <div class="section-header">
+                <span class="section-num">02</span>
+                <h2>Operadores</h2>
+                <p>La verdadera potencia de Emmet: construye estructuras complejas en una sola línea.</p>
+            </div>
+
+            <div class="cards-grid">
+
+                <div class="card card--highlight">
+                    <div class="card__title">Hijo <code>&gt;</code></div>
+                    <div class="snippet" data-copy="nav>ul>li"><code class="snippet__abbr">nav>ul>li</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;nav&gt;<br>&nbsp;&lt;ul&gt;<br>&nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>&nbsp;&lt;/ul&gt;<br>&lt;/nav&gt;</code>
+                    </div>
+                    <p class="card__desc">Crea elementos <strong>anidados</strong> descendiendo un nivel.</p>
+                </div>
+
+                <div class="card card--highlight">
+                    <div class="card__title">Hermano <code>+</code></div>
+                    <div class="snippet" data-copy="div+p+span"><code class="snippet__abbr">div+p+span</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;div&gt;&lt;/div&gt;<br>&lt;p&gt;&lt;/p&gt;<br>&lt;span&gt;&lt;/span&gt;</code>
+                    </div>
+                    <p class="card__desc">Crea elementos al <strong>mismo nivel</strong> (hermanos).</p>
+                </div>
+
+                <div class="card card--highlight">
+                    <div class="card__title">Multiplicar <code>*</code></div>
+                    <div class="snippet" data-copy="ul>li*5"><code class="snippet__abbr">ul>li*5</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;ul&gt;<br>&nbsp;&lt;li&gt;&lt;/li&gt; ×5<br>&lt;/ul&gt;</code>
+                    </div>
+                    <div class="snippet" data-copy="div.card*3"><code class="snippet__abbr">div.card*3</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">3 divs con class="card"</code>
+                    </div>
+                    <p class="card__desc">Repite un elemento <strong>N veces</strong>.</p>
+                </div>
+
+                <div class="card card--highlight">
+                    <div class="card__title">Subir nivel <code>^</code></div>
+                    <div class="snippet" data-copy="div>p>span^h2"><code class="snippet__abbr">div>p>span^h2</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;div&gt;<br>&nbsp;&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;<br>&nbsp;&lt;h2&gt;&lt;/h2&gt;<br>&lt;/div&gt;</code>
+                    </div>
+                    <p class="card__desc">Sube <strong>un nivel</strong> en el árbol DOM. Úsalo como alternativa a los
+                        paréntesis.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Agrupación <code>( )</code></div>
+                    <div class="snippet" data-copy="(header>nav)+(main>article)+footer"><code
+                            class="snippet__abbr">(header>nav)+(main>article)+footer</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;header&gt;&lt;nav&gt;...&lt;/nav&gt;&lt;/header&gt;<br>&lt;main&gt;&lt;article&gt;...&lt;/article&gt;&lt;/main&gt;<br>&lt;footer&gt;&lt;/footer&gt;</code>
+                    </div>
+                    <p class="card__desc">Agrupa expresiones para combinar estructuras paralelas.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Contador <code>$</code></div>
+                    <div class="snippet" data-copy="ul>li.item$*4"><code class="snippet__abbr">ul>li.item$*4</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;li class="item1"&gt;&lt;/li&gt;<br>&lt;li class="item2"&gt;&lt;/li&gt;<br>&lt;li class="item3"&gt;&lt;/li&gt;<br>&lt;li class="item4"&gt;&lt;/li&gt;</code>
+                    </div>
+                    <div class="snippet" data-copy="li>{Ítem $}*3"><code class="snippet__abbr">li>{Ítem $}*3</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">Ítem 1, Ítem 2, Ítem 3</code>
+                    </div>
+                    <p class="card__desc"><strong>$$</strong> da formato con cero: 01, 02...</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── SECCIÓN 3: ATRIBUTOS ── -->
+        <section class="section" id="atributos">
+            <div class="section-header">
+                <span class="section-num">03</span>
+                <h2>Clases, IDs y Atributos</h2>
+                <p>Emmet usa la misma sintaxis que los selectores CSS, así que es muy intuitivo.</p>
+            </div>
+
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card__title">Clases <code>.clase</code></div>
+                    <div class="snippet" data-copy="div.container"><code class="snippet__abbr">div.container</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;div class="container"&gt;&lt;/div&gt;</code></div>
+                    <div class="snippet" data-copy="p.lead.bold"><code class="snippet__abbr">p.lead.bold</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;p class="lead bold"&gt;&lt;/p&gt;</code></div>
+                    <div class="snippet" data-copy=".card"><code class="snippet__abbr">.card</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;div class="card"&gt;&lt;/div&gt;</code></div>
+                    <p class="card__desc">Sin tag = <strong>div</strong> por defecto. Varias clases concatenadas con
+                        <strong>.</strong></p>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">IDs <code>#id</code></div>
+                    <div class="snippet" data-copy="section#hero"><code class="snippet__abbr">section#hero</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;section id="hero"&gt;&lt;/section&gt;</code></div>
+                    <div class="snippet" data-copy="#app"><code class="snippet__abbr">#app</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;div id="app"&gt;&lt;/div&gt;</code></div>
+                    <p class="card__desc">El símbolo <strong>#</strong> añade el atributo id.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Atributos <code>[attr]</code></div>
+                    <div class="snippet" data-copy="a[href=# target=_blank]"><code
+                            class="snippet__abbr">a[href=# target=_blank]</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;a href="#" target="_blank"&gt;&lt;/a&gt;</code></div>
+                    <div class="snippet" data-copy="input[placeholder=Buscar required]"><code
+                            class="snippet__abbr">input[placeholder=Buscar required]</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">&lt;input placeholder="Buscar" required&gt;</code></div>
+                    <p class="card__desc">Los corchetes <strong>[]</strong> permiten cualquier atributo HTML.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Combinación completa</div>
+                    <div class="snippet" data-copy="ul.nav>li.nav__item*3>a.nav__link[href=#]{Ítem $}">
+                        <code class="snippet__abbr">ul.nav>li.nav__item*3>a.nav__link[href=#]{Ítem $}</code>
+                        <span class="snippet__arrow">→</span>
+                        <code
+                            class="snippet__output">&lt;ul class="nav"&gt;<br>&nbsp;&lt;li class="nav__item"&gt;<br>&nbsp;&nbsp;&lt;a href="#" class="nav__link"&gt;Ítem 1&lt;/a&gt;<br>&nbsp;&lt;/li&gt; ×3<br>&lt;/ul&gt;</code>
+                    </div>
+                    <p class="card__desc">Una sola línea genera un menú de navegación completo.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Estructura de tarjetas</div>
+                    <div class="snippet" data-copy="div.card*3>img+div.card__body>h3>{Título $}+p>lorem6">
+                        <code class="snippet__abbr">div.card*3>(img+div.card__body>h3>{Título $}+p>lorem6)</code>
+                        <span class="snippet__arrow">→</span>
+                        <code class="snippet__output">3 tarjetas con imagen, título y párrafo</code>
+                    </div>
+                    <p class="card__desc">Ideal para generar layouts de componentes repetibles.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Formulario completo</div>
+                    <div class="snippet"
+                        data-copy="form.form>div.form__group*3>(label+input:text)+button[type=submit]{Enviar}">
+                        <code
+                            class="snippet__abbr">form>div.form__group>(label+input:text)+button[type=submit]{Enviar}</code>
+                        <span class="snippet__arrow">→</span>
+                        <code class="snippet__output">form con grupo label/input y botón</code>
+                    </div>
+                    <p class="card__desc">Genera la estructura de un formulario en segundos.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── SECCIÓN 4: CSS ── -->
+        <section class="section" id="css-emmet">
+            <div class="section-header">
+                <span class="section-num">04</span>
+                <h2>CSS con Emmet</h2>
+                <p>Emmet también funciona en archivos .css — escribe iniciales y expande con Tab.</p>
+            </div>
+
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card__title">Dimensiones</div>
+                    <div class="snippet" data-copy="w100"><code class="snippet__abbr">w100</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">width: 100px;</code></div>
+                    <div class="snippet" data-copy="w100p"><code class="snippet__abbr">w100p</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">width: 100%;</code></div>
+                    <div class="snippet" data-copy="h50vh"><code class="snippet__abbr">h50vh</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">height: 50vh;</code></div>
+                    <div class="snippet" data-copy="maw960"><code class="snippet__abbr">maw960</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">max-width: 960px;</code></div>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Margin y Padding</div>
+                    <div class="snippet" data-copy="m0"><code class="snippet__abbr">m0</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">margin: 0;</code></div>
+                    <div class="snippet" data-copy="p20"><code class="snippet__abbr">p20</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">padding: 20px;</code></div>
+                    <div class="snippet" data-copy="mt16"><code class="snippet__abbr">mt16</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">margin-top: 16px;</code></div>
+                    <div class="snippet" data-copy="px24"><code class="snippet__abbr">px24</code><span
+                            class="snippet__arrow">→</span><code
+                            class="snippet__output">padding-left: 24px; padding-right: 24px;</code></div>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Color y Tipografía</div>
+                    <div class="snippet" data-copy="c#333"><code class="snippet__abbr">c#333</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">color: #333;</code></div>
+                    <div class="snippet" data-copy="bg#fff"><code class="snippet__abbr">bg#fff</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">background: #fff;</code></div>
+                    <div class="snippet" data-copy="fz18"><code class="snippet__abbr">fz18</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">font-size: 18px;</code></div>
+                    <div class="snippet" data-copy="fw700"><code class="snippet__abbr">fw700</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">font-weight: 700;</code></div>
+                    <div class="snippet" data-copy="lh1.5"><code class="snippet__abbr">lh1.5</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">line-height: 1.5;</code></div>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Display y Flexbox</div>
+                    <div class="snippet" data-copy="df"><code class="snippet__abbr">df</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">display: flex;</code></div>
+                    <div class="snippet" data-copy="dn"><code class="snippet__abbr">dn</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">display: none;</code></div>
+                    <div class="snippet" data-copy="jcc"><code class="snippet__abbr">jcc</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">justify-content: center;</code>
+                    </div>
+                    <div class="snippet" data-copy="aic"><code class="snippet__abbr">aic</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">align-items: center;</code>
+                    </div>
+                    <div class="snippet" data-copy="fxdc"><code class="snippet__abbr">fxdc</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">flex-direction: column;</code>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Posicionamiento</div>
+                    <div class="snippet" data-copy="pos:r"><code class="snippet__abbr">pos:r</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">position: relative;</code>
+                    </div>
+                    <div class="snippet" data-copy="pos:a"><code class="snippet__abbr">pos:a</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">position: absolute;</code>
+                    </div>
+                    <div class="snippet" data-copy="pos:f"><code class="snippet__abbr">pos:f</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">position: fixed;</code></div>
+                    <div class="snippet" data-copy="t0"><code class="snippet__abbr">t0</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">top: 0;</code></div>
+                    <div class="snippet" data-copy="z10"><code class="snippet__abbr">z10</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">z-index: 10;</code></div>
+                </div>
+
+                <div class="card">
+                    <div class="card__title">Bordes y efectos</div>
+                    <div class="snippet" data-copy="bd"><code class="snippet__abbr">bd</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">border: ;</code></div>
+                    <div class="snippet" data-copy="bdrs8"><code class="snippet__abbr">bdrs8</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">border-radius: 8px;</code>
+                    </div>
+                    <div class="snippet" data-copy="op.5"><code class="snippet__abbr">op.5</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">opacity: 0.5;</code></div>
+                    <div class="snippet" data-copy="trs"><code class="snippet__abbr">trs</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">transition: ;</code></div>
+                    <div class="snippet" data-copy="bxsh"><code class="snippet__abbr">bxsh</code><span
+                            class="snippet__arrow">→</span><code class="snippet__output">box-shadow: ;</code></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── SECCIÓN 5: PLAYGROUND ── -->
+        <section class="section" id="playground">
+            <div class="section-header">
+                <span class="section-num">05</span>
+                <h2>Playground</h2>
+                <p>Escribe un atajo Emmet y ve la expansión HTML en tiempo real.</p>
+            </div>
+
+            <div class="playground">
+                <div class="playground__input-wrap">
+                    <label class="playground__label" for="emmetInput">Abreviatura Emmet</label>
+                    <input type="text" id="emmetInput" class="playground__input"
+                        placeholder="Ej: ul>li.item$*3>{Ítem $}" autocomplete="off" spellcheck="false">
+                </div>
+                <div class="playground__output-wrap">
+                    <label class="playground__label">Resultado expandido</label>
+                    <pre class="playground__output" id="emmetOutput">// El resultado aparece aquí...</pre>
+                </div>
+                <div class="playground__examples">
+                    <span class="playground__examples-label">Probar:</span>
+                    <button class="example-btn" data-abbr="!">!</button>
+                    <button class="example-btn" data-abbr="nav>ul>li*4>a{Menú $}">nav>ul>li*4</button>
+                    <button class="example-btn" data-abbr="div.card*3>(img+h3>{Título $}+p>lorem5)">card*3</button>
+                    <button class="example-btn"
+                        data-abbr="form>(div.group>label+input:text)*3+button[type=submit]{Enviar}">form</button>
+                    <button class="example-btn" data-abbr="table>thead>tr>th*4^^tbody>tr*3>td*4">table</button>
+                    <button class="example-btn" data-abbr="lorem10">lorem10</button>
+                </div>
+            </div>
+
+            <div class="tips-grid">
+                <div class="tip">
+                    <span class="tip__icon">💡</span>
+                    <div>
+                        <strong>Wrap with Emmet</strong>
+                        <p>Selecciona código → <kbd>Ctrl+Shift+P</kbd> → <em>Emmet: Wrap with Abbreviation</em></p>
+                    </div>
+                </div>
+                <div class="tip">
+                    <span class="tip__icon">⚙️</span>
+                    <div>
+                        <strong>Emmet en JS / Vue</strong>
+                        <p>Añade en <code>settings.json</code>:
+                            <code>"emmet.includeLanguages": {"javascript": "html"}</code></p>
+                    </div>
+                </div>
+                <div class="tip">
+                    <span class="tip__icon">🎯</span>
+                    <div>
+                        <strong>Balance Tag</strong>
+                        <p><kbd>Ctrl+Shift+P</kbd> → <em>Emmet: Balance Outward</em> para seleccionar el tag padre.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── SECCIÓN 6: CHEAT SHEET ── -->
+        <section class="section" id="cheatsheet">
+            <div class="section-header">
+                <span class="section-num">06</span>
+                <h2>Cheat Sheet</h2>
+                <p>Referencia rápida completa. Haz clic en cualquier abreviatura para copiarla.</p>
+            </div>
+
+            <div class="cheat-groups">
+
+                <div class="cheat-group">
+                    <h3 class="cheat-group__title">Operadores HTML</h3>
+                    <table class="cheat-table">
+                        <thead>
+                            <tr>
+                                <th>Símbolo</th>
+                                <th>Ejemplo</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="cheat-sym" data-copy="nav>ul>li">&gt;</td>
+                                <td class="cheat-ex" data-copy="nav>ul>li">nav>ul>li</td>
+                                <td>Elemento hijo (anidado)</td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-sym" data-copy="div+p+span">+</td>
+                                <td class="cheat-ex" data-copy="div+p+span">div+p+span</td>
+                                <td>Elemento hermano (mismo nivel)</td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-sym" data-copy="div>p>a^h2">^</td>
+                                <td class="cheat-ex" data-copy="div>p>a^h2">div>p>a^h2</td>
+                                <td>Subir un nivel en el DOM</td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-sym" data-copy="li*5">*</td>
+                                <td class="cheat-ex" data-copy="li*5">li*5</td>
+                                <td>Multiplicar N veces</td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-sym" data-copy="(header>nav)+(footer)">()</td>
+                                <td class="cheat-ex" data-copy="(header>nav)+(footer)">(header>nav)+(footer)</td>
+                                <td>Agrupar expresiones</td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-sym" data-copy="li.item$*3">$</td>
+                                <td class="cheat-ex" data-copy="li.item$*3">li.item$*3</td>
+                                <td>Contador ($$&nbsp;→&nbsp;01, 02...)</td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-sym" data-copy="p>{Texto}">{}</td>
+                                <td class="cheat-ex" data-copy="p>{Texto}">p>{Texto}</td>
+                                <td>Texto como contenido</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cheat-group">
+                    <h3 class="cheat-group__title">Selectores y Atributos</h3>
+                    <table class="cheat-table">
+                        <thead>
+                            <tr>
+                                <th>Símbolo</th>
+                                <th>Ejemplo</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="cheat-sym" data-copy="div.clase">.</td>
+                                <td class="cheat-ex" data-copy="div.clase">div.clase</td>
+                                <td>Clase CSS</td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-sym" data-copy="div#id">#</td>
+                                <td class="cheat-ex" data-copy="div#id">div#id</td>
+                                <td>Atributo ID</td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-sym" data-copy="a[href=# target=_blank]">[]</td>
+                                <td class="cheat-ex" data-copy="a[href=# target=_blank]">a[href=# target=_blank]</td>
+                                <td>Atributo personalizado</td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-sym" data-copy=".wrap">div implícito</td>
+                                <td class="cheat-ex" data-copy=".wrap">.wrap</td>
+                                <td>Sin tag = div por defecto</td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-sym" data-copy="input:email">:</td>
+                                <td class="cheat-ex" data-copy="input:email">input:email</td>
+                                <td>Tipo de input</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cheat-group">
+                    <h3 class="cheat-group__title">CSS Shortcuts</h3>
+                    <table class="cheat-table">
+                        <thead>
+                            <tr>
+                                <th>Abreviatura</th>
+                                <th>Resultado</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="cheat-ex" data-copy="w100p">w100p</td>
+                                <td>width: 100%</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="h50vh">h50vh</td>
+                                <td>height: 50vh</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="maw960">maw960</td>
+                                <td>max-width: 960px</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="m0a">m0a</td>
+                                <td>margin: 0 auto</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="p16">p16</td>
+                                <td>padding: 16px</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="df">df</td>
+                                <td>display: flex</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="dg">dg</td>
+                                <td>display: grid</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="jcc">jcc</td>
+                                <td>justify-content: center</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="aic">aic</td>
+                                <td>align-items: center</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="fz16">fz16</td>
+                                <td>font-size: 16px</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="fw700">fw700</td>
+                                <td>font-weight: 700</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="c#fff">c#fff</td>
+                                <td>color: #fff</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="bg#000">bg#000</td>
+                                <td>background: #000</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="pos:a">pos:a</td>
+                                <td>position: absolute</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="bdrs8">bdrs8</td>
+                                <td>border-radius: 8px</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="trs">trs</td>
+                                <td>transition: </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="op.5">op.5</td>
+                                <td>opacity: 0.5</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cheat-ex" data-copy="z10">z10</td>
+                                <td>z-index: 10</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <div class="toast" id="toast">
+        <span class="toast__icon">✓</span>
+        <span id="toastMsg">¡Copiado!</span>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
